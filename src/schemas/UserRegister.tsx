@@ -9,6 +9,7 @@ export interface UserRegister {
   confirmPassword: string;
   phone: string;
 }
+
 const newUserSchema = yup.object({
   name: yup.string().required("⚠️ Name is required "),
   surname: yup.string().required("⚠️ Surname is required "),
@@ -39,4 +40,5 @@ const newUserSchema = yup.object({
     .oneOf([yup.ref("password")], "Passwords must match"),
   phone: yup.string().length(10).required("⚠️ Phone number is required"),
 });
+
 export default newUserSchema;
