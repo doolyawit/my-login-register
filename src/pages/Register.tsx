@@ -3,11 +3,16 @@ import RegisterHeader from "../components/RegisterHeader";
 
 import RegisterContextProvider from "../hook/RegisterProvider";
 import RegisterFooter from "../components/RegisterFooter";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   return (
     <RegisterContextProvider>
       <div className="flex  min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Sign up</title>
+        </Helmet>
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <RegisterHeader />
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

@@ -1,5 +1,5 @@
 import { Field, Form } from "react-final-form";
-import { handleSubmit, validateFormValues } from "../utils/register";
+import { handleSubmit, validateFormValues } from "../utils/validateRegister";
 import newUserSchema from "../schemas/UserRegister";
 
 const validate = validateFormValues(newUserSchema);
