@@ -3,10 +3,16 @@ import validateFormValues, { handleSubmit } from "../utils/validateLogin";
 import userSchema from "../schemas/UserLogin";
 
 const validate = validateFormValues(userSchema);
+
 const FormLogin = () => {
   return (
     <Form
-      onSubmit={handleSubmit}
+      onSubmit={(values) => {
+        handleSubmit(values, {
+          onSuccess: () => {console.log("here")},
+          onFailure: () => {console.log()}
+        })
+      }}
       validate={validate}
       initialValues={{ email: "", password: "" }}
       render={({ handleSubmit }) => (

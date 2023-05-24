@@ -16,7 +16,14 @@ const validateFormValues =
       return errors;
     }
   };
-export const handleSubmit = async (values: UserLogin) => {
+
+export const handleSubmit = async (
+  values: UserLogin,
+  callback: {
+    onSuccess: () => void;
+    onFailure: () => void;
+  }
+) => {
   if (
     (values.email === "doolyawit.y@20scoops.net" &&
       values.password === "Diw0638051541") ||
@@ -27,10 +34,12 @@ export const handleSubmit = async (values: UserLogin) => {
         Username : ${values.email} 
         Password: ${values.password}`
     );
+    callback.onSuccess?.()
     window.alert(`Login Successfully ✅ 👀 
       Username : ${values.email} 
       Password: ${values.password}`);
   } else {
+    callback.onFailure?.()
     console.log("Login Failed : Invalid Username or Password ❌ 🙅🏻‍♀️");
     window.alert("Login Failed : Invalid Username or Password ❌ 🙅🏻‍♀️");
   }
