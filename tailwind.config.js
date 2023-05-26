@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
@@ -12,11 +12,16 @@ export default {
       },
       colors: {
         transparent: "transparent",
-        green: "#38470B",
-        brown: "#A0855B",
-        white: "#F9F6F2",
-        beige: "#F1D6AB",
-        red: "#BF382A",
+        orange: "#fe6e45",
+        blue: "#4a79ec",
+        yellow: "#fff87b",
+        pink: "#feaefd",
+        green: "#86f6cc",
+        violet: "#7e3cf9",
+        red: "#F45050",
+      },
+      fontFamily: {
+        sans: ["Outfit", "sans-serif"],
       },
     },
   },

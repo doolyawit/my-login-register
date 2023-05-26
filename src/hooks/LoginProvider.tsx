@@ -2,7 +2,7 @@ import React from "react";
 
 export const LoginContext = React.createContext({
   title: "Hi, Welcome Back 👋",
-  subTitle: "Sign in to continue ❇️",
+  subTitle: "Sign in to continue ",
   message: "Don't have account yet?",
   link: "register",
   aMessage: "Sign Up",
@@ -11,8 +11,8 @@ export const LoginContext = React.createContext({
 function LoginContextProvider({ children }: { children: JSX.Element }) {
   const contextValue = {
     title: "Hi, Welcome Back 👋",
-    subTitle: "Sign in to continue ❇️",
-    message: "Don't have account yet?",
+    subTitle: "Sign in to continue ",
+    message: "Don't have an account yet?",
     link: "register",
     aMessage: "Sign Up",
   };
