@@ -1,4 +1,4 @@
-import { Field, Form } from "react-final-form";
+import { Form } from "react-final-form";
 import { validateFormValues } from "../../validations/validateRegister";
 import newUserSchema, { UserRegister } from "../../schemas/UserRegister";
 import InputField from "./InputField";
@@ -109,16 +109,6 @@ const FormRegister = () => {
                   <OptionField value="not specify" text="Not Specify" />
                 </>
               </InputField>
-              <Field
-                name="gender"
-                subscription={{ error: true, touched: true }}
-              >
-                {({ meta: { error, touched } }) => (
-                  <div className="mt-1 text-right text-sm font-bold text-red">
-                    {touched && error}
-                  </div>
-                )}
-              </Field>
             </div>
           </div>
 
