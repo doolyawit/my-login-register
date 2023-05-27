@@ -5,7 +5,7 @@ export interface UserLogin {
   password: string;
 }
 
-const userSchema = yup.object({
+const userSchema: yup.ObjectSchema<UserLogin> = yup.object({
   email: yup
     .string()
     .required("⚠️ Please Input Email 💌")

@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap");
 :root {
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,11 +17,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background: radial-gradient(
+    at center center,
+    rgb(255, 255, 255),
+    rgb(209, 250, 229),
+    rgb(191, 219, 254)
+  );
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #4a79ec;
   text-decoration: inherit;
 }
 a:hover {

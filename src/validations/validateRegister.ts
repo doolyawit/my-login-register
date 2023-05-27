@@ -16,20 +16,3 @@ export const validateFormValues =
       return errors;
     }
   };
-export const handleSubmit = async (values: UserRegister) => {
-  console.log(`Register Successfully! ✅ 👀
-    Name : ${values.name}
-    Surname : ${values.surname}
-    Gender : ${values.gender}
-    Email : ${values.email}
-    Password : ${values.password}
-    Phone Number : ${values.phone}`);
-
-  window.alert(`Register Successfully! ✅ 👀
-    Name : ${values.name}
-    Surname : ${values.surname}
-    Gender : ${values.gender}
-    Email : ${values.email}
-    Password : ${values.password}
-    Phone Number : ${values.phone}`);
-};

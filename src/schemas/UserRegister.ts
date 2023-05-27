@@ -10,12 +10,12 @@ export interface UserRegister {
   phone: string;
 }
 
-const newUserSchema = yup.object({
+const newUserSchema: yup.ObjectSchema<UserRegister> = yup.object({
   name: yup.string().required("⚠️ Name is required "),
   surname: yup.string().required("⚠️ Surname is required "),
   gender: yup
     .string()
-    .matches(/(men|women|not specify)/)
+    .oneOf(["men", "women", "not specify"], " ⚠️ Invalid Gender")
     .required("⚠️ Gender is required"),
   email: yup
     .string()
