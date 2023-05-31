@@ -1,5 +1,5 @@
 import FormLogin from "../components/forms/FormLogin";
-import LoginContextProvider, { LoginContext } from "../hooks/LoginProvider";
+import LoginContextProvider, { LoginContext } from "../contexts/LoginProvider";
 import Header from "../components/layouts/Header";
 import Footer from "../components/layouts/Footer";
 import Title from "../components/layouts/Title";

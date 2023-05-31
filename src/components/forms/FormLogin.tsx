@@ -2,50 +2,36 @@ import { Form } from "react-final-form";
 import validateFormValues from "../../validations/validateLogin";
 import userSchema, { UserLogin } from "../../schemas/UserLogin";
 import InputField from "./InputField";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const validate = validateFormValues(userSchema);
 
-const handleLogin = async (
-  values: UserLogin,
-  callback: {
-    onSuccess: () => void;
-    onFailure: () => void;
-  }
-) => {
-  if (
-    (values.email === "doolyawit.y@20scoops.net" &&
-      values.password === "Diw0638051541") ||
-    (values.email === "test@test.com" && values.password === "Test1234")
-  ) {
-    callback.onSuccess?.();
-  } else {
-    callback.onFailure?.();
-  }
-};
-
 const FormLogin = () => {
+  const navigate = useNavigate();
+
+  const userLogin = useContext(AuthContext);
+
+  if (userLogin?.checkAuth()) {
+    //cannot navigate from context provider
+    navigate("/home");
+  }
+
+  const handleLogin = async (values: UserLogin) => {
+    //TODO: Commit this code
+    //TODO: Convert to MVVM ?
+    userLogin?.login(values);
+  };
+
   return (
     <Form
-      onSubmit={(values) => {
-        handleLogin(values, {
-          onSuccess: () => {
-            console.log(
-              `Login Successfully ✅ 👀 
-              Username : ${values.email} 
-              Password: ${values.password}`
-            );
-            window.alert(`Login Successfully ✅ 👀 
-              Username : ${values.email} 
-              Password: ${values.password}`);
-          },
-          onFailure: () => {
-            console.log("Login Failed : Invalid Username or Password ❌ 🙅🏻‍♀️");
-            window.alert("Login Failed : Invalid Username or Password ❌ 🙅🏻‍♀️");
-          },
-        });
-      }}
+      onSubmit={handleLogin}
       validate={validate}
-      initialValues={{ email: "", password: "" }}
+      initialValues={{
+        email: "",
+        password: "",
+      }}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -61,7 +47,7 @@ const FormLogin = () => {
               <InputField
                 name="email"
                 component="input"
-                type="email"
+                type="string"
                 placeholder="Example@gmail.com"
               />
             </div>
@@ -84,6 +70,7 @@ const FormLogin = () => {
               />
             </div>
           </div>
+
           <div>
             <button
               type="submit"
@@ -92,6 +79,11 @@ const FormLogin = () => {
               Login Now !
             </button>
           </div>
+          {userLogin.errorMessage && (
+            <div className=" mt-1 text-center text-sm font-semibold text-red">
+              {userLogin.errorMessage}
+            </div>
+          )}
         </form>
       )}
     />
