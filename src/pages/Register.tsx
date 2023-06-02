@@ -2,7 +2,7 @@ import FormRegister from "../components/forms/FormRegister";
 import Header from "../components/layouts/Header";
 import RegisterContextProvider, {
   RegisterContext,
-} from "../hooks/RegisterProvider";
+} from "../contexts/RegisterProvider";
 import Footer from "../components/layouts/Footer";
 import Title from "../components/layouts/Title";
 

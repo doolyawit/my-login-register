@@ -1,42 +1,26 @@
 import { Form } from "react-final-form";
 import { validateFormValues } from "../../validations/validateRegister";
-import newUserSchema, { UserRegister } from "../../schemas/UserRegister";
+import newUserSchema from "../../schemas/UserRegister";
+import { UserRegister } from "../../datasources/interfaces/user";
 import InputField from "./InputField";
 import OptionField from "./OptionField";
+import { AuthContext } from "../../authentication/AuthProvider";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 const validate = validateFormValues(newUserSchema);
 
-const handleRegister = async (
-  _values: UserRegister,
-  callback: { onRegister: () => void }
-) => {
-  callback.onRegister?.();
-};
-
 const FormRegister = () => {
+  const navigate = useNavigate();
+  const { register } = useContext(AuthContext);
+
+  const handleRegister = async (values: UserRegister) => {
+    register(values);
+    navigate("/login");
+  };
   return (
     <Form
-      onSubmit={(values) => {
-        handleRegister(values, {
-          onRegister: () => {
-            console.log(`Register Successfully! ✅ 👀
-            Name : ${values.name}
-            Surname : ${values.surname}
-            Gender : ${values.gender}
-            Email : ${values.email}
-            Password : ${values.password}
-            Phone Number : ${values.phone}`);
-
-            window.alert(`Register Successfully! ✅ 👀
-            Name : ${values.name}
-            Surname : ${values.surname}
-            Gender : ${values.gender}
-            Email : ${values.email}
-            Password : ${values.password}
-            Phone Number : ${values.phone}`);
-          },
-        });
-      }}
+      onSubmit={handleRegister}
       validate={validate}
       initialValues={{
         name: "",

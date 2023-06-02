@@ -1,9 +1,5 @@
 import * as yup from "yup";
-
-export interface UserLogin {
-  email: string;
-  password: string;
-}
+import { UserLogin } from "../datasources/interfaces/user";
 
 const userSchema: yup.ObjectSchema<UserLogin> = yup.object({
   email: yup

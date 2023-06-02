@@ -1,11 +1,12 @@
+import { AuthProvider } from "./authentication/AuthProvider";
+import { Router } from "./Router";
 import "./styles/App.css";
-import Login from "./pages/Login";
 
 function App() {
   return (
-    <>
-      <Login />
-    </>
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   );
 }
 

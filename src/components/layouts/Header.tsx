@@ -5,10 +5,10 @@ const Header = ({
 }: {
   mode: React.Context<{
     title: string;
-    subTitle: string;
-    message: string;
-    link: string;
-    aMessage: string;
+    subTitle?: string;
+    message?: string;
+    link?: string;
+    aMessage?: string;
   }>;
 }) => {
   const context = useContext(mode);
