@@ -1,6 +1,12 @@
 import React from "react";
 
-export const RegisterContext = React.createContext({
+export const RegisterContext = React.createContext<{
+  title: string;
+  subTitle?: string;
+  message?: string;
+  link?: string;
+  aMessage?: string;
+}>({
   title: "Register your account",
   subTitle: "⬇️ ⬇️ ⬇️",
   message: "Back to",

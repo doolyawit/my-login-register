@@ -1,14 +1,5 @@
 import * as yup from "yup";
-
-export interface UserRegister {
-  name: string;
-  surname: string;
-  gender: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-  phone: string;
-}
+import { UserRegister } from "../datasources/interfaces/user";
 
 const newUserSchema: yup.ObjectSchema<UserRegister> = yup.object({
   name: yup.string().required("⚠️ Name is required "),

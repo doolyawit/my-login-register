@@ -1,27 +1,17 @@
 import { Form } from "react-final-form";
 import validateFormValues from "../../validations/validateLogin";
-import userSchema, { UserLogin } from "../../schemas/UserLogin";
+import userSchema from "../../schemas/UserLogin";
+import { UserLogin } from "../../datasources/interfaces/user";
 import InputField from "./InputField";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
+import { AuthContext } from "../../authentication/AuthProvider";
 
 const validate = validateFormValues(userSchema);
-
 const FormLogin = () => {
-  const navigate = useNavigate();
-
-  const userLogin = useContext(AuthContext);
-
-  if (userLogin?.checkAuth()) {
-    //cannot navigate from context provider
-    navigate("/home");
-  }
+  const { login, errorMessage } = useContext(AuthContext);
 
   const handleLogin = async (values: UserLogin) => {
-    //TODO: Commit this code
-    //TODO: Convert to MVVM ?
-    userLogin?.login(values);
+    login(values);
   };
 
   return (
@@ -79,9 +69,9 @@ const FormLogin = () => {
               Login Now !
             </button>
           </div>
-          {userLogin.errorMessage && (
+          {errorMessage && (
             <div className=" mt-1 text-center text-sm font-semibold text-red">
-              {userLogin.errorMessage}
+              {errorMessage}
             </div>
           )}
         </form>

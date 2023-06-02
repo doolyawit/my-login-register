@@ -1,9 +1,10 @@
 import { Form } from "react-final-form";
 import { validateFormValues } from "../../validations/validateRegister";
-import newUserSchema, { UserRegister } from "../../schemas/UserRegister";
+import newUserSchema from "../../schemas/UserRegister";
+import { UserRegister } from "../../datasources/interfaces/user";
 import InputField from "./InputField";
 import OptionField from "./OptionField";
-import { AuthContext } from "../../contexts/AuthContext";
+import { AuthContext } from "../../authentication/AuthProvider";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,14 +12,11 @@ const validate = validateFormValues(newUserSchema);
 
 const FormRegister = () => {
   const navigate = useNavigate();
-  const userRegister = useContext(AuthContext);
+  const { register } = useContext(AuthContext);
 
   const handleRegister = async (values: UserRegister) => {
-    userRegister.register(values);
-    if (userRegister.register(values)) {
-      //cannot navigate from context provider
-      navigate("/");
-    }
+    register(values);
+    navigate("/login");
   };
   return (
     <Form
