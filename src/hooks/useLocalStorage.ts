@@ -1,5 +1,3 @@
-import { UserLogin } from "../datasources/interfaces/user";
-
 export const useLocalStorage = () => {
   const setItem = (key: string, value: string) => {
     localStorage.setItem(key, value);
@@ -12,3 +10,4 @@ export const useLocalStorage = () => {
 
   return { setItem, removeItem };
 };
+//TODO: recheck this hook

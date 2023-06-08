@@ -1,10 +1,11 @@
-import FormRegister from "../components/forms/FormRegister";
+import FormRegister from "../components/forms/register/FormRegister";
 import Header from "../components/layouts/Header";
 import RegisterContextProvider, {
   RegisterContext,
 } from "../contexts/RegisterProvider";
 import Footer from "../components/layouts/Footer";
 import Title from "../components/layouts/Title";
+import { RegisterEmoji } from "../components/svg/RegisterEmoji";
 
 const Register = () => {
   return (
@@ -13,7 +14,8 @@ const Register = () => {
         <Title title="Sign Up" />
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Header mode={RegisterContext} />
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <RegisterEmoji w="100" h="100" />
+          <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
             <FormRegister />
           </div>
         </div>

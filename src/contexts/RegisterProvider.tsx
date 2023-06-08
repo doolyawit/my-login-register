@@ -8,7 +8,6 @@ export const RegisterContext = React.createContext<{
   aMessage?: string;
 }>({
   title: "Register your account",
-  subTitle: "⬇️ ⬇️ ⬇️",
   message: "Back to",
   link: "/",
   aMessage: "Login",
@@ -17,7 +16,6 @@ export const RegisterContext = React.createContext<{
 function RegisterContextProvider({ children }: { children: JSX.Element }) {
   const contextValue = {
     title: "Register your account",
-    subTitle: "⬇️ ⬇️ ⬇️",
     message: "Back to",
     link: "/",
     aMessage: "Login",

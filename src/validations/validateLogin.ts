@@ -1,7 +1,6 @@
-import { UserLogin } from "../schemas/UserLogin";
+import { UserLogin } from "../services/datasources/interfaces/user";
 import { setIn } from "final-form";
 import * as yup from "yup";
-
 const validateFormValues =
   (schema: yup.ObjectSchema<UserLogin>) => async (values: UserLogin) => {
     try {

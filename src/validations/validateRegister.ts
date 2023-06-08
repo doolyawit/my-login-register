@@ -1,4 +1,4 @@
-import { UserRegister } from "../schemas/UserRegister";
+import { UserRegister } from "../services/datasources/interfaces/user";
 import { setIn } from "final-form";
 import * as yup from "yup";
 

@@ -14,11 +14,11 @@ const Footer = ({
 }) => {
   const context = useContext(mode);
   return (
-    <div className="mt-10 text-black">
+    <div className=" text-black">
       {context.message}{" "}
       <Link
         to={`${context.link}`}
-        className="font-bold text-orange hover:text-lg"
+        className="font-extrabold text-orange hover:text-lg"
       >
         {context.aMessage}
       </Link>

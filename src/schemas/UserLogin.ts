@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { UserLogin } from "../datasources/interfaces/user";
+import { UserLogin } from "../services/datasources/interfaces/user";
 
 const userSchema: yup.ObjectSchema<UserLogin> = yup.object({
   email: yup
