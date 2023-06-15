@@ -1,6 +1,7 @@
 import React from "react";
+import { IHomeContextOption } from "./interfaces";
 
-export const HomeContext = React.createContext({
+export const HomeContext = React.createContext<IHomeContextOption>({
   title: "Here are our products",
 });
 

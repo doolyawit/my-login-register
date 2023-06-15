@@ -39,8 +39,8 @@ const FormLogin = () => {
 
           <div>
             <Button
-              word="Login Now!"
-              cusStyle="mx-auto my-10 flex w-1/2	 justify-center rounded-full bg-violet px-3 py-1.5 text-sm font-extrabold leading-6 text-yellow shadow-sm hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+              label="Login Now!"
+              customizeStyle="mx-auto mb-2 sm:my-5 w-1/2 bg-violet px-3 py-1.5 text-sm font-extrabold leading-6 text-yellow shadow-sm hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
             />
           </div>
           {errorMessage && <ErrorBox>{errorMessage}</ErrorBox>}

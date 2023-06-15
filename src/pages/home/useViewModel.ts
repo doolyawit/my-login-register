@@ -6,23 +6,26 @@ import {
   ProductRepositoryAble,
 } from "../../services/datasources/interfaces/product";
 import { ProductRepository } from "../../services/product";
-import ProductServiceMock from "../../services/datasources/mocks/product";
 import { ProductService } from "../../services/datasources/remotes/product";
 
-export const useViewModel = () => {
+const useViewModel = () => {
   const [user] = useState(useAuth().user);
+
   const [products, setProducts] = useState<Product[]>([]);
+  const [productIndex, setProductIndex] = useState(-1);
 
   const { removeItem } = useLocalStorage();
+
   const productRepo: ProductRepositoryAble = useMemo(() => {
     return new ProductRepository(new ProductService());
   }, []);
+
   useEffect(() => {
     productRepo
       .getProducts()
       .then((res) => {
-        console.log("res: ", res);
         setProducts(res);
+        console.log("response ", res);
       })
       .catch((err) => {
         console.error(err);
@@ -33,5 +36,8 @@ export const useViewModel = () => {
     user,
     removeItem,
     products,
+    productIndex,
+    setProductIndex,
   };
 };
+export default useViewModel;

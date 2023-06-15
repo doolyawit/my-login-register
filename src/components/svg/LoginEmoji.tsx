@@ -1,13 +1,13 @@
-export const LoginEmoji = ({ w, h }: { w: string; h: string }) => {
+export const LoginEmoji = () => {
   return (
     <svg
-      className="mx-auto mt-2"
+      className="mx-auto mt-2 w-12 rounded-full"
       viewBox="0 0 36 36"
       fill="none"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
-      width={w}
-      height={h}
+      // width={width}
+      // height={height}
     >
       <title>Georgia O</title>
       <mask

@@ -10,4 +10,3 @@ export const useLocalStorage = () => {
 
   return { setItem, removeItem };
 };
-//TODO: recheck this hook

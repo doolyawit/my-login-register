@@ -3,11 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./styles/index.css";
 import { BrowserRouter } from "react-router-dom";
-
+import ProductDetailModalProvider from "./contexts/ProductDetailModalProvider.tsx";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ProductDetailModalProvider>
+        <App />
+      </ProductDetailModalProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

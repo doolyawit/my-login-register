@@ -1,17 +1,14 @@
 import React from "react";
+import { ILoginRegisterContextOption } from "./interfaces";
 
-export const RegisterContext = React.createContext<{
-  title: string;
-  subTitle?: string;
-  message?: string;
-  link?: string;
-  aMessage?: string;
-}>({
-  title: "Register your account",
-  message: "Back to",
-  link: "/",
-  aMessage: "Login",
-});
+export const RegisterContext = React.createContext<ILoginRegisterContextOption>(
+  {
+    title: "Register your account",
+    message: "Back to",
+    link: "/",
+    aMessage: "Login",
+  }
+);
 
 function RegisterContextProvider({ children }: { children: JSX.Element }) {
   const contextValue = {

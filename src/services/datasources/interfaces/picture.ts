@@ -1,10 +1,7 @@
 export interface Picture {
   id: number;
   alt_description: string;
-  urls: {
-    full: string;
-    regular: string;
-  };
+  url: string;
 }
 
 export interface PictureServiceAble {

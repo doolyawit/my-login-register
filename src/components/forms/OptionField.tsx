@@ -1,12 +1,6 @@
-const OptionField = ({
-  value,
-  text,
-  disabled,
-}: {
-  value: string;
-  text: string;
-  disabled?: boolean;
-}) => {
+import { OptionFieldProps } from "../interfaces/form";
+
+const OptionField = ({ value, text, disabled }: OptionFieldProps) => {
   if (disabled) {
     return (
       <option value={value} disabled>

@@ -1,15 +1,15 @@
-const Button = ({
-  handleClick,
-  word,
-  cusStyle,
-}: {
-  handleClick?: () => void;
-  word: string;
-  cusStyle: string;
-}): JSX.Element => {
+import { cx } from "@emotion/css";
+import { ButtonProps } from "./interfaces/button";
+const Button = ({ label, customizeStyle, onClick }: ButtonProps) => {
   return (
-    <button onClick={handleClick} className={cusStyle}>
-      {word}
+    <button
+      onClick={onClick}
+      className={cx(
+        customizeStyle,
+        `flex items-center justify-center rounded-full`
+      )}
+    >
+      {label}
     </button>
   );
 };

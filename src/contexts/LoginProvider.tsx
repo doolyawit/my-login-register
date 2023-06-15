@@ -1,12 +1,7 @@
 import React from "react";
+import { ILoginRegisterContextOption } from "./interfaces";
 
-export const LoginContext = React.createContext<{
-  title: string;
-  subTitle?: string;
-  message?: string;
-  link?: string;
-  aMessage?: string;
-}>({
+export const LoginContext = React.createContext<ILoginRegisterContextOption>({
   title: "Hi, Welcome Back 👋",
   subTitle: "Sign in to continue ",
   message: "Don't have account yet?",

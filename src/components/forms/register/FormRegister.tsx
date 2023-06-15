@@ -94,8 +94,8 @@ const FormRegister = () => {
           </InputBox>
           <div>
             <Button
-              word="Register !"
-              cusStyle="mx-auto my-10 flex w-1/2	 justify-center rounded-full bg-violet px-3 py-1.5 text-sm font-extrabold leading-6 text-yellow shadow-sm hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+              label="Register !"
+              customizeStyle="mx-auto sm:my-5 mb-2  w-2/3	 bg-violet px-3 py-1.5 text-sm font-extrabold leading-6 text-yellow shadow-sm hover:bg-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
             />
           </div>
         </form>

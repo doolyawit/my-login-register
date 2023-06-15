@@ -1,3 +1,9 @@
-export const ProductList = ({ children }: { children: JSX.Element[] }) => {
-  return <div className="mb-16 flex items-center">{children}</div>;
-};
+function ProductList({ children }: { children: JSX.Element[] }) {
+  return (
+    <div className="flex flex-col items-center  md:mb-16 md:flex-row">
+      {children}
+    </div>
+  );
+}
+
+export default ProductList;
