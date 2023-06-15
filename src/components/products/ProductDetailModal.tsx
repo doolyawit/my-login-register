@@ -12,7 +12,6 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
       modalLabel={modalLabel}
     >
       <div className="m-0 hidden h-full w-full flex-col  justify-normal  bg-green sm:flex">
-        {/* TODO: fix scroll the whole page */}
         <div className="mb-4 flex justify-between border-b  border-solid  border-black px-4 py-3 sm:mb-0">
           <span className=" text-black sm:text-lg">DETAILS</span>
           <Button
@@ -26,7 +25,6 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
 
         <div className="flex justify-between gap-5 p-7 sm:gap-3  sm:px-5 sm:py-3 lg:py-3">
           <div className="w-1/2 lg:w-1/3">
-            {/* TODO: set size of image to equal */}
             <img
               src={product.url}
               alt=""
@@ -96,7 +94,7 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
           </div>
         </div>
 
-        <div className="flex justify-center gap-10	 sm:gap-5 lg:content-stretch lg:bg-green xl:absolute xl:left-96 xl:top-96 xl:mt-2">
+        <div className="flex justify-center gap-10	 sm:gap-5 lg:content-stretch lg:bg-green xl:mt-2">
           <Button
             label="Cancel"
             onClick={() => {
@@ -113,7 +111,6 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
 
       {/* Mobile - start */}
       <div className="h-11/12 m-0 flex w-full  flex-col  justify-normal bg-green sm:hidden md:hidden lg:hidden xl:hidden">
-        {/* TODO: fix scroll the whole page */}
         <div className="mb-4 flex justify-between  border-b  border-solid border-black px-4 py-3">
           <span className="text-lg text-black sm:text-2xl">DETAILS</span>
           <Button
@@ -126,7 +123,6 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
         </div>
 
         <div className="flex flex-col justify-between gap-5 px-5">
-          {/* TODO: set size of image to equal */}
           <img src={product.url} alt="" className="h-36 w-screen rounded-xl" />
 
           <div className="w-11/12">

@@ -3,7 +3,9 @@ import { ProductDetailModalContextType } from "./interfaces";
 
 //TODO: fix this null arrest!
 export const ProductDetailModalContext =
-  React.createContext<ProductDetailModalContextType>(null!);
+  React.createContext<ProductDetailModalContextType>(
+    {} as ProductDetailModalContextType
+  );
 
 function ProductDetailModalProvider({
   children,

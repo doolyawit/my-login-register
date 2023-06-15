@@ -37,7 +37,7 @@ class BaseAxios {
   getInstance() {
     return this.instance;
   }
-  //TODO: recheck clear token
+
   private handleUnAuthorized() {
     if (window) {
       clearToken();

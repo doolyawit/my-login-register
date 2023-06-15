@@ -6,7 +6,6 @@ interface AuthContextType {
   user: User | null;
   setCredential: (user: User) => void;
 }
-//TODO: Recheck - Fix the error: Type 'null' is not assignable to type 'AuthContextType'.
 export const AuthContext = createContext<AuthContextType>({
   user: JSON.parse(JSON.stringify(localStorage.getItem("user"))),
   setCredential: (user) => {

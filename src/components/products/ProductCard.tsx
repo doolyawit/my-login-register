@@ -2,7 +2,6 @@ import Button from "../Button";
 import { ProductCardProps } from "../interfaces/product";
 
 export default function ProductCard({ product, onClick }: ProductCardProps) {
-  //Todo: re-compose
   return (
     <>
       {/* Not normal */}
@@ -11,7 +10,6 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
           <div key={product.id} className=" flex flex-col py-5  ">
             <div className=" w-full overflow-hidden rounded-md bg-gray-200 ">
               <img
-                //TODO: set size of image to equal from fetch
                 src={product.url}
                 alt={product.description}
                 className="h-6 w-full object-cover object-center sm:h-1/3  md:h-1/3 lg:h-full lg:w-full"
@@ -52,7 +50,6 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         <div className=" flex max-w-2xl flex-1 gap-1 ">
           <div className=" w-6/12">
             <img
-              //TODO: set size of image to equal from fetch
               src={product.url}
               alt={product.description}
               className=" m-2 h-20 w-full rounded-xl object-cover object-center"

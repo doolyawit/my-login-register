@@ -9,7 +9,6 @@ export class PictureService
     return new Promise((resolve, reject) => {
       this.getInstance()
         .get<Picture[]>("/pictures")
-        //TODO : maybe fix size here b4 resolve
         .then((res) => resolve(res.data))
         .catch((err) => reject(err));
     });

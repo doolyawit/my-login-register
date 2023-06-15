@@ -1,5 +1,4 @@
-import Modal, { Styles } from "react-modal";
-import { css, cx } from "@emotion/css";
+import Modal from "react-modal";
 import { modalProps } from "./interfaces/modal";
 
 const defaultStyle = {
@@ -9,7 +8,7 @@ const defaultStyle = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "70%",
-    height: "65%",
+    height: "60%",
     background: "white",
     borderRadius: "0.6rem",
     border: "none",
@@ -21,7 +20,6 @@ function BaseModal({
   isModalOpen,
   modalLabel,
   children,
-  modalSize,
   closeModal,
 }: modalProps) {
   return (
@@ -31,11 +29,7 @@ function BaseModal({
       contentLabel={modalLabel}
       style={defaultStyle}
       appElement={document.getElementById("root") || undefined}
-      //TODO : use CX instead of CSS
-      //TODO: research abt appElement (line 33)
       //* appElement for screen reader user
-      //TODO: size of modal
-      //TODO:size of img (sm)
     >
       {children}
     </Modal>
