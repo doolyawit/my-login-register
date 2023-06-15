@@ -34,15 +34,21 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
             />
           </div>
           <div className="w-11/12">
-            <div className=" relative left-80 mt-1 w-1/3 rounded-full border border-solid border-black bg-pink px-3 text-center text-2xl sm:left-0 sm:mt-0 sm:w-full sm:text-xl lg:left-0 xl:left-0">
+            <div className=" relative left-80 mt-1 w-1/3 rounded-full border border-solid border-black bg-pink px-3 text-center text-2xl text-black sm:left-0 sm:mt-0 sm:w-full sm:text-xl lg:left-0 xl:left-0">
               {product.name}
             </div>
-            <div className="mr-2 mt-4 text-right text-sm sm:mr-1 sm:mt-2">
+            <div className="mr-2 mt-4 text-right text-sm text-black sm:mr-1 sm:mt-2">
               {product.category}
             </div>
-            <div className=" text-xl sm:text-base">${product.price}</div>
+            <div className=" text-xl text-black sm:text-base">
+              ${product.price}
+            </div>
             <div className="description-container relative bg-green sm:mt-1 sm:text-xs">
-              <p className={"no-scrollbar h-52 max-h-52 overflow-scroll"}>
+              <p
+                className={
+                  "no-scrollbar h-52 max-h-52 overflow-scroll text-black"
+                }
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Egestas maecenas pharetra convallis posuere morbi leo urna.
@@ -96,11 +102,11 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
             onClick={() => {
               closeModal();
             }}
-            customizeStyle="bg-transparent border-black border  hover:bg-red sm:text-sm "
+            customizeStyle="bg-transparent border-black border  hover:bg-red sm:text-sm text-black"
           ></Button>
           <Button
             label="Save to Bookmark"
-            customizeStyle="bg-transparent border-black border  hover:bg-yellow sm:text-sm"
+            customizeStyle="bg-transparent border-black border  hover:bg-yellow sm:text-sm text-black"
           ></Button>
         </div>
       </div>
