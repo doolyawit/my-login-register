@@ -6,32 +6,33 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
   return (
     <>
       {/* Not normal */}
-      <div className=" mx-5 hidden flex-1 rounded-xl bg-gradient-to-b from-orange  to-white drop-shadow-2xl  backdrop-blur-lg  sm:hidden md:flex">
-        <div className="   sm:max-w-2xl sm:px-6 md:max-w-2xl lg:max-w-7xl lg:px-6">
+      <div className=" mx-5 hidden flex-1 rounded-xl bg-gradient-to-b from-orange  to-white drop-shadow-2xl  backdrop-blur-lg  sm:hidden md:mx-2 md:mb-10 md:inline lg:mx-4 lg:inline xl:mx-6 xl:inline">
+        <div className=" md:w-full2 sm:max-w-2xl  sm:px-6 md:max-w-xl lg:max-w-7xl lg:px-6">
           <div key={product.id} className=" flex flex-col py-5  ">
             <div className=" w-full overflow-hidden rounded-md bg-gray-200 ">
               <img
                 //TODO: set size of image to equal from fetch
                 src={product.url}
                 alt={product.description}
-                className="h-6  w-full object-cover object-center sm:h-1/3 md:h-1/3  lg:h-full lg:w-full"
+                className="h-6 w-full object-cover object-center sm:h-1/3  md:h-1/3 lg:h-full lg:w-full"
               />
             </div>
-
-            <div className=" mt-4 flex justify-between text-black">
+            <div className=" mt-4 flex justify-between text-black md:mt-2">
               <div className="flex flex-col">
-                <div className=" self-start text-black">{product.name}</div>
+                <div className=" self-start text-black  md:text-sm lg:text-base">
+                  {product.name}
+                </div>
                 <div className=" self-start text-xs font-extrabold text-blue">
                   {product.category}
                 </div>
               </div>
-              <div className=" mt-1  h-full rounded-full border  border-solid border-black bg-yellow px-3 text-xs">
+              <div className=" mt-1  h-full rounded-full border  border-solid border-black bg-yellow px-3 text-xs md:px-2 ">
                 ${product.price}
               </div>
             </div>
 
-            <div className="mt-4 ">
-              <p className="mt-1 text-left text-xs text-black  ">
+            <div className="mt-4 md:mt-1 ">
+              <p className="mt-1 text-left text-xs text-black xl:mt-2 xl:text-center  ">
                 {product.description}
               </p>
             </div>
@@ -68,7 +69,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
                   {product.category}
                 </div>
               </div>
-              <div className="  h-6 w-1/3  rounded-full border border-solid border-black bg-yellow text-sm">
+              <div className="  h-6 w-1/3 rounded-full border border-solid border-black bg-yellow text-sm">
                 ${product.price}
               </div>
             </div>

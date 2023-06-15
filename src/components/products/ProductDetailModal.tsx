@@ -25,7 +25,7 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
         </div>
 
         <div className="flex justify-between gap-5 p-7 sm:gap-3  sm:px-5 sm:py-3 lg:py-3">
-          <div className="w-1/2">
+          <div className="w-1/2 lg:w-1/3">
             {/* TODO: set size of image to equal */}
             <img
               src={product.url}
@@ -34,7 +34,7 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
             />
           </div>
           <div className="w-11/12">
-            <div className=" relative left-80 mt-1 w-1/3 rounded-full border border-solid border-black bg-pink px-3 text-center text-2xl sm:left-0 sm:mt-0 sm:w-full sm:text-xl lg:left-72 xl:left-96">
+            <div className=" relative left-80 mt-1 w-1/3 rounded-full border border-solid border-black bg-pink px-3 text-center text-2xl sm:left-0 sm:mt-0 sm:w-full sm:text-xl lg:left-0 xl:left-0">
               {product.name}
             </div>
             <div className="mr-2 mt-4 text-right text-sm sm:mr-1 sm:mt-2">
@@ -90,7 +90,7 @@ function ProductDetailModal({ product }: ProductDetailModalProps) {
           </div>
         </div>
 
-        <div className="flex justify-center gap-10 sm:gap-5	 lg:content-stretch lg:bg-green">
+        <div className="flex justify-center gap-10	 sm:gap-5 lg:content-stretch lg:bg-green xl:absolute xl:left-96 xl:top-96 xl:mt-2">
           <Button
             label="Cancel"
             onClick={() => {

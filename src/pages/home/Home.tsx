@@ -22,7 +22,7 @@ const Home = () => {
           shopName="DIWX SHOP"
           logoIcon={<LoginEmoji />}
           menuItems={["Home", "Pricing", "Contact", <RegisterEmoji />]}
-          menuItemStyle="border border-solid border-black hover:bg-yellow text-sm py-1 md:flex md:justify-center md:self-center sm:h-8 "
+          menuItemStyle="border border-solid border-black hover:bg-yellow text-sm py-1 md:flex md:justify-center md:self-center sm:h-8 md:mr-2 lg:text-base xl:mr-5"
         />
         <Title title="Welcome!" />
         <Header mode={HomeContext} />

@@ -19,8 +19,8 @@ const NavBar = ({
           {logoIcon}
         </div>
 
-        <div className="flex w-1/3 flex-grow items-center justify-evenly rounded-2xl   md:mr-5">
-          <ul className="flex flex-1 rounded-full border-solid border-black text-black">
+        <div className="flex w-1/3 flex-grow items-center justify-evenly rounded-2xl   md:mr-2">
+          <ul className="flex flex-1 rounded-full border-solid border-black text-black lg:justify-center">
             {menuItems?.map((item, index) => (
               <li key={index} className={cx(defaultStyle, menuItemStyle)}>
                 {item}
@@ -30,7 +30,7 @@ const NavBar = ({
         </div>
       </nav>
 
-      {/* ----- */}
+      {/* ----- mobile */}
 
       <nav className="flex w-screen justify-between rounded-2xl sm:flex md:hidden lg:hidden xl:hidden ">
         <div className="z-50 w-1/6 flex-1 flex-grow self-center rounded-2xl text-left">
