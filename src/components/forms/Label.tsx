@@ -1,4 +1,4 @@
-import { LabelProps } from "../interfaces/form";
+import { LabelProps } from '../interfaces/form';
 const Label = ({ htmlFor, text }: LabelProps) => {
   return (
     <label

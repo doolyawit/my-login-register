@@ -1,12 +1,12 @@
-import { useAuth } from "../../hooks/useAuth";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
-import { useEffect, useMemo, useState } from "react";
+import { useAuth } from '../../hooks/useAuth';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { useEffect, useMemo, useState } from 'react';
 import {
   Product,
   ProductRepositoryAble,
-} from "../../services/datasources/interfaces/product";
-import { ProductRepository } from "../../services/product";
-import { ProductService } from "../../services/datasources/remotes/product";
+} from '../../services/datasources/interfaces/product';
+import { ProductRepository } from '../../services/product';
+import { ProductService } from '../../services/datasources/remotes/product';
 
 const useViewModel = () => {
   const [user] = useState(useAuth().user);
@@ -25,11 +25,12 @@ const useViewModel = () => {
       .getProducts()
       .then((res) => {
         setProducts(res);
-        console.log("response ", res);
+        console.log('response ', res);
       })
       .catch((err) => {
         console.error(err);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {

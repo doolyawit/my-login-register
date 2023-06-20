@@ -1,5 +1,5 @@
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { IMetaPageOption } from "../interfaces/layout";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { IMetaPageOption } from '../interfaces/layout';
 
 const Title = ({ title }: IMetaPageOption) => {
   return (

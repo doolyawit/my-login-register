@@ -1,8 +1,8 @@
-import Modal from "react-modal";
-import { modalProps } from "../interfaces/modal";
+import Modal from 'react-modal';
+import { modalProps } from '../interfaces/modal';
 
 const defaultStyle = {
-  overlay: { backgroundColor: "rgba(0, 0, 0, 0.5)" },
+  overlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)' },
 };
 
 function BaseModal({
@@ -19,7 +19,7 @@ function BaseModal({
       contentLabel={modalLabel}
       style={defaultStyle}
       className={modalStyle}
-      appElement={document.getElementById("root") || undefined}
+      appElement={document.getElementById('root') || undefined}
     >
       {children}
     </Modal>

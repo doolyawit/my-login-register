@@ -1,11 +1,11 @@
-import FormLogin from "../components/forms/login/FormLogin";
+import FormLogin from '../components/forms/login/FormLogin';
 import LoginContextProvider, {
   LoginContext,
-} from "../contexts/forms/LoginProvider";
-import Header from "../components/layouts/Header";
-import Footer from "../components/layouts/Footer";
-import Title from "../components/layouts/Title";
-import { LoginEmoji } from "../components/svg/LoginEmoji";
+} from '../contexts/forms/LoginProvider';
+import Header from '../components/layouts/Header';
+import Footer from '../components/layouts/Footer';
+import Title from '../components/layouts/Title';
+import { LoginEmoji } from '../components/svg/LoginEmoji';
 
 const Login = () => {
   return (

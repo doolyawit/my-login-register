@@ -1,5 +1,5 @@
-import { cx } from "@emotion/css";
-import { ButtonProps } from "./interfaces/button";
+import { cx } from '@emotion/css';
+import { ButtonProps } from './interfaces/button';
 const Button = ({ label, customizeStyle, onClick }: ButtonProps) => {
   return (
     <button

@@ -1,3 +1,3 @@
 export const clearToken = () => {
-  localStorage.removeItem("user");
+  localStorage.removeItem('user');
 };

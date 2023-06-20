@@ -1,4 +1,4 @@
-import { SupportedInputs } from "react-final-form";
+import { SupportedInputs } from 'react-final-form';
 
 export interface InputFieldProps {
   name: string;

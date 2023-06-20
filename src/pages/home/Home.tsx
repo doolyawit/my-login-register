@@ -1,16 +1,16 @@
-import Header from "../../components/layouts/Header";
-import HomeContextProvider, { HomeContext } from "../../contexts/HomeProvider";
-import Title from "../../components/layouts/Title";
-import useViewModel from "./useViewModel";
-import NavBar from "../../components/NavBar";
-import ProductCard from "../../components/products/ProductCard";
-import ProductList from "../../components/products/ProductList";
-import { LoginEmoji } from "../../components/svg/LoginEmoji";
-import { RegisterEmoji } from "../../components/svg/RegisterEmoji";
-import { useInformationModal } from "../../hooks/useInformationModal";
-import ProductDetailModal from "../../components/modals/ProductDetailModal";
-import Footer from "../../components/layouts/Footer";
-import { SearchBox } from "../../components/forms/SearchBox";
+import Header from '../../components/layouts/Header';
+import HomeContextProvider, { HomeContext } from '../../contexts/HomeProvider';
+import Title from '../../components/layouts/Title';
+import useViewModel from './useViewModel';
+import NavBar from '../../components/NavBar';
+import ProductCard from '../../components/products/ProductCard';
+import ProductList from '../../components/products/ProductList';
+import { LoginEmoji } from '../../components/svg/LoginEmoji';
+import { RegisterEmoji } from '../../components/svg/RegisterEmoji';
+import { useInformationModal } from '../../hooks/useInformationModal';
+import ProductDetailModal from '../../components/modals/ProductDetailModal';
+import Footer from '../../components/layouts/Footer';
+import { SearchBox } from '../../components/forms/SearchBox';
 
 const Home = () => {
   const { products, setProductIndex, productIndex } = useViewModel();
@@ -21,7 +21,7 @@ const Home = () => {
         <NavBar
           shopName="DIWX SHOP"
           logoIcon={<LoginEmoji />}
-          menuItems={["Home", "Pricing", "Contact", <RegisterEmoji />]}
+          menuItems={['Home', 'Pricing', 'Contact', <RegisterEmoji />]}
           menuItemStyle="border border-solid border-black hover:bg-yellow text-sm py-1 md:flex md:justify-center md:self-center sm:h-8 md:mr-2 lg:text-base xl:mr-5"
         />
         <Title title="Welcome!" />

@@ -1,10 +1,10 @@
-import { Form } from "react-final-form";
-import InputField from "../InputField";
-import Button from "../../Button";
-import Label from "../Label";
-import InputBox from "../InputBox";
-import ErrorBox from "../ErrorBox";
-import { useViewModel } from "./useViewModel";
+import { Form } from 'react-final-form';
+import InputField from '../InputField';
+import Button from '../../Button';
+import Label from '../Label';
+import InputBox from '../InputBox';
+import ErrorBox from '../ErrorBox';
+import { useViewModel } from './useViewModel';
 
 const FormLogin = () => {
   const { validate, errorMessage, handleSubmit } = useViewModel();
@@ -13,8 +13,8 @@ const FormLogin = () => {
       onSubmit={handleSubmit}
       validate={validate}
       initialValues={{
-        email: "",
-        password: "",
+        email: '',
+        password: '',
       }}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit} className="space-y-6">

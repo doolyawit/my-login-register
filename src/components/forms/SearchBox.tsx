@@ -1,5 +1,5 @@
-import { Subject, timer } from "rxjs";
-import { debounce } from "rxjs/operators";
+import { Subject, timer } from 'rxjs';
+import { debounce } from 'rxjs/operators';
 
 const inputSubject = new Subject();
 

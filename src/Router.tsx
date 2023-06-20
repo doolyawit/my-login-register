@@ -1,9 +1,9 @@
-import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
-import { useAuth } from "./hooks/useAuth";
-import { PRIVATE_PATH, PUBLIC_PATH } from "./constants/path";
-import Home from "./pages/home/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { useAuth } from './hooks/useAuth';
+import { PRIVATE_PATH, PUBLIC_PATH } from './constants/path';
+import Home from './pages/home/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function RequireAuth({ children }: { children: JSX.Element }) {
   const auth = useAuth();

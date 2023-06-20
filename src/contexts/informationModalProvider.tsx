@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { InformationModalContextType } from "./interfaces";
+import React, { useState } from 'react';
+import { InformationModalContextType } from './interfaces';
 
 export const InformationModalContext =
   React.createContext<InformationModalContextType>(

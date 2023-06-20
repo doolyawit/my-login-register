@@ -1,4 +1,4 @@
-import { ProductCardProps } from "../interfaces/product";
+import { ProductCardProps } from '../interfaces/product';
 
 export default function ProductCard({ product, onClick }: ProductCardProps) {
   return (
