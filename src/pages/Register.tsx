@@ -1,19 +1,21 @@
-import FormRegister from "../components/forms/FormRegister";
+import FormRegister from "../components/forms/register/FormRegister";
 import Header from "../components/layouts/Header";
 import RegisterContextProvider, {
   RegisterContext,
-} from "../contexts/RegisterProvider";
+} from "../contexts/forms/RegisterProvider";
 import Footer from "../components/layouts/Footer";
 import Title from "../components/layouts/Title";
+import { RegisterEmoji } from "../components/svg/RegisterEmoji";
 
 const Register = () => {
   return (
     <RegisterContextProvider>
-      <div className="flex min-h-full flex-1 flex-col justify-center  rounded-2xl bg-white px-6 py-12 drop-shadow-2xl backdrop-blur-lg lg:px-8">
+      <div className="flex min-h-full flex-1 flex-col justify-center  rounded-2xl bg-white px-6 drop-shadow-2xl backdrop-blur-lg sm:py-12 lg:px-8">
         <Title title="Sign Up" />
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="mx-auto w-full max-w-sm">
           <Header mode={RegisterContext} />
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <RegisterEmoji />
+          <div className="sm:mx-auto sm:mt-5 sm:w-full sm:max-w-sm">
             <FormRegister />
           </div>
         </div>

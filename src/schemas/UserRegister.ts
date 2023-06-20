@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { UserRegister } from "../datasources/interfaces/user";
+import { UserRegister } from "../services/datasources/interfaces/user";
 
 const newUserSchema: yup.ObjectSchema<UserRegister> = yup.object({
   name: yup.string().required("⚠️ Name is required "),

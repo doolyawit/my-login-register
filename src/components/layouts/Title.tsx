@@ -1,16 +1,14 @@
-import { Helmet } from "react-helmet";
-
-interface IMetaPageOption {
-  title: string;
-  ogImg?: string;
-}
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { IMetaPageOption } from "../interfaces/layout";
 
 const Title = ({ title }: IMetaPageOption) => {
   return (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>{title}</title>
-    </Helmet>
+    <HelmetProvider>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{title}</title>
+      </Helmet>
+    </HelmetProvider>
   );
 };
 
