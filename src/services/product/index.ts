@@ -1,7 +1,7 @@
 import {
   ProductRepositoryAble,
   ProductServiceAble,
-} from "../datasources/interfaces/product";
+} from '../datasources/interfaces/product';
 
 export class ProductRepository implements ProductRepositoryAble {
   private service: ProductServiceAble;

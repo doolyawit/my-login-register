@@ -1,4 +1,4 @@
-import { Product } from "../../services/datasources/interfaces/product";
+import { Product } from '../../services/datasources/interfaces/product';
 
 export interface ProductCardProps {
   product: Product;

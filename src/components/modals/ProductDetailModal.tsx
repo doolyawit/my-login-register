@@ -1,6 +1,6 @@
-import { useInformationModal } from "../../hooks/useInformationModal";
-import { Product } from "../../services/datasources/interfaces/product";
-import InformationModal from "./InformationModal";
+import { useInformationModal } from '../../hooks/useInformationModal';
+import { Product } from '../../services/datasources/interfaces/product';
+import InformationModal from './InformationModal';
 
 function ProductDetailModal({
   products,
@@ -96,7 +96,7 @@ function ProductDetailModal({
       }}
       button2Label="Add to Cart"
       button2OnClick={() => {
-        console.log("Add to cart");
+        console.log('Add to cart');
       }}
     >
       <div className=" hidden justify-between gap-5 p-7  sm:flex sm:gap-3 sm:px-5 sm:py-3 md:flex lg:flex lg:py-3 xl:flex">
@@ -118,7 +118,7 @@ function ProductDetailModal({
             ${products[productIndex]?.price}
           </div>
           <div className="description-container relative bg-green sm:mt-1 sm:text-xs">
-            <p className={"h-52 max-h-52 overflow-scroll text-black"}>
+            <p className={'h-52 max-h-52 overflow-scroll text-black'}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Egestas maecenas pharetra convallis posuere morbi leo urna. Purus

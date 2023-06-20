@@ -1,4 +1,4 @@
-import { OptionFieldProps } from "../interfaces/form";
+import { OptionFieldProps } from '../interfaces/form';
 
 const OptionField = ({ value, text, disabled }: OptionFieldProps) => {
   if (disabled) {

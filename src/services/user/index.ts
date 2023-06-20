@@ -2,7 +2,7 @@ import {
   UserLogin,
   UserRepositoryAble,
   UserServiceAble,
-} from "../datasources/interfaces/user";
+} from '../datasources/interfaces/user';
 
 export class UserRepository implements UserRepositoryAble {
   private service: UserServiceAble;

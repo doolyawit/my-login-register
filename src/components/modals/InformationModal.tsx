@@ -1,7 +1,7 @@
-import { useInformationModal } from "../../hooks/useInformationModal";
-import BaseModal from "./BaseModal";
-import { InformationModalProps } from "../interfaces/modal";
-import Button from "../Button";
+import { useInformationModal } from '../../hooks/useInformationModal';
+import BaseModal from './BaseModal';
+import { InformationModalProps } from '../interfaces/modal';
+import Button from '../Button';
 
 function InformationModal({
   children,
@@ -55,7 +55,7 @@ function InformationModal({
       closeModal={closeModal}
       modalLabel={modalLabel}
       modalStyle={
-        " relative top-1/4 mx-auto w-2/3 h-fit rounded-xl  sm:absolute sm:left-1/4 xl:left-1/3 sm:top-1/4 sm:w-1/3 bg-green p-0 m-0 md:w-1/2  lg:w-1/2 xl:w-1/3  "
+        ' relative top-1/4 mx-auto w-2/3 h-fit rounded-xl  sm:absolute sm:left-1/4 xl:left-1/3 sm:top-1/4 sm:w-1/3 bg-green p-0 m-0 md:w-1/2  lg:w-1/2 xl:w-1/3  '
       }
     >
       {/* Header */}

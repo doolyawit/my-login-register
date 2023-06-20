@@ -1,9 +1,9 @@
-import BaseAxios from "./baseAxios";
+import BaseAxios from './baseAxios';
 
 class PictureRemote extends BaseAxios {
   constructor() {
     super({
-      baseURL: "http://localhost:8001/api",
+      baseURL: 'http://localhost:8001/api',
     });
   }
 }

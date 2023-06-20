@@ -1,10 +1,10 @@
-import { Form } from "react-final-form";
-import InputField from "../InputField";
-import OptionField from "../OptionField";
-import Button from "../../Button";
-import InputBox from "../InputBox";
-import Label from "../Label";
-import { useViewModel } from "./useViewModel";
+import { Form } from 'react-final-form';
+import InputField from '../InputField';
+import OptionField from '../OptionField';
+import Button from '../../Button';
+import InputBox from '../InputBox';
+import Label from '../Label';
+import { useViewModel } from './useViewModel';
 
 const FormRegister = () => {
   const { validate, handleSubmit } = useViewModel();
@@ -13,13 +13,13 @@ const FormRegister = () => {
       onSubmit={handleSubmit}
       validate={validate}
       initialValues={{
-        name: "",
-        surname: "",
-        gender: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-        phone: "",
+        name: '',
+        surname: '',
+        gender: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+        phone: '',
       }}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -43,7 +43,7 @@ const FormRegister = () => {
           </InputBox>
           <InputBox>
             <Label htmlFor="gender" text="Gender" />
-            <InputField name="gender" component="select" defaultValue={""}>
+            <InputField name="gender" component="select" defaultValue={''}>
               <>
                 <OptionField
                   value=""

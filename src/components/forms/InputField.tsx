@@ -1,5 +1,5 @@
-import { Field, useField } from "react-final-form";
-import { InputFieldProps } from "../interfaces/form";
+import { Field, useField } from 'react-final-form';
+import { InputFieldProps } from '../interfaces/form';
 
 const InputField = ({
   name,

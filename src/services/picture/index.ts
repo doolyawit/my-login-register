@@ -1,7 +1,7 @@
 import {
   PictureRepositoryAble,
   PictureServiceAble,
-} from "../datasources/interfaces/picture";
+} from '../datasources/interfaces/picture';
 
 export class PictureRepository implements PictureRepositoryAble {
   private service: PictureServiceAble;

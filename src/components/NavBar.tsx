@@ -1,9 +1,9 @@
-import { NavBarProps } from "./interfaces/navBar";
-import { cx } from "@emotion/css";
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavBarProps } from './interfaces/navBar';
+import { cx } from '@emotion/css';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-const defaultStyle = "cursor-pointer rounded-full px-1 mb-1 text-center mx-2 ";
+const defaultStyle = 'cursor-pointer rounded-full px-1 mb-1 text-center mx-2 ';
 
 const NavBar = ({
   shopName,

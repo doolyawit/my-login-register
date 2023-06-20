@@ -1,7 +1,7 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
-import { PUBLIC_PATH } from "../constants/path";
-import { User } from "./datasources/interfaces/user";
-import { clearToken } from "../utils/storage";
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+import { PUBLIC_PATH } from '../constants/path';
+import { User } from './datasources/interfaces/user';
+import { clearToken } from '../utils/storage';
 
 class BaseAxios {
   private instance: AxiosInstance;
@@ -24,7 +24,7 @@ class BaseAxios {
       (config) => {
         const token = this.getToken();
         if (token?.trim()?.length > 0) {
-          config.headers["Authorization"] = `Bearer ${token}`;
+          config.headers['Authorization'] = `Bearer ${token}`;
         }
         return config;
       },
@@ -45,7 +45,7 @@ class BaseAxios {
     }
   }
   private getToken() {
-    return (JSON.parse(localStorage.getItem("user") ?? "{}") as User)?.token;
+    return (JSON.parse(localStorage.getItem('user') ?? '{}') as User)?.token;
   }
 }
 

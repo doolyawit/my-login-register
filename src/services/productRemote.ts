@@ -1,8 +1,8 @@
-import BaseAxios from "./baseAxios";
+import BaseAxios from './baseAxios';
 
 class ProductRemote extends BaseAxios {
   constructor() {
-    super({ baseURL: "http://localhost:8001/api" });
+    super({ baseURL: 'http://localhost:8001/api' });
   }
 }
 
