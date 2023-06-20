@@ -1,4 +1,3 @@
-import Footer from "../../components/layouts/Footer";
 import Header from "../../components/layouts/Header";
 import HomeContextProvider, { HomeContext } from "../../contexts/HomeProvider";
 import Title from "../../components/layouts/Title";
@@ -6,18 +5,19 @@ import useViewModel from "./useViewModel";
 import NavBar from "../../components/NavBar";
 import ProductCard from "../../components/products/ProductCard";
 import ProductList from "../../components/products/ProductList";
-import ProductDetailModal from "../../components/products/ProductDetailModal";
 import { LoginEmoji } from "../../components/svg/LoginEmoji";
 import { RegisterEmoji } from "../../components/svg/RegisterEmoji";
-import { useProductDetailModal } from "../../hooks/useProductDetailModal";
+import { useInformationModal } from "../../hooks/useInformationModal";
+import ProductDetailModal from "../../components/modals/ProductDetailModal";
+import Footer from "../../components/layouts/Footer";
+import { SearchBox } from "../../components/forms/SearchBox";
 
 const Home = () => {
   const { products, setProductIndex, productIndex } = useViewModel();
-  const { openModal } = useProductDetailModal();
-
+  const { openModal } = useInformationModal();
   return (
     <HomeContextProvider>
-      <div className="md:h-11/12 min-h-full w-fit min-w-full flex-1 rounded-2xl bg-white drop-shadow-2xl backdrop-blur-lg sm:h-full sm:w-screen sm:justify-around  ">
+      <div className="md:h-11/12 min-h-full w-screen min-w-full flex-1 rounded-2xl bg-white drop-shadow-2xl backdrop-blur-lg sm:h-full sm:w-screen sm:justify-around  ">
         <NavBar
           shopName="DIWX SHOP"
           logoIcon={<LoginEmoji />}
@@ -26,6 +26,7 @@ const Home = () => {
         />
         <Title title="Welcome!" />
         <Header mode={HomeContext} />
+        <SearchBox />
         {/* Product index map */}
         <ProductList>
           {products &&
@@ -35,8 +36,8 @@ const Home = () => {
                   key={index}
                   product={product}
                   onClick={() => {
-                    openModal();
                     setProductIndex(index);
+                    openModal();
                   }}
                 />
               );
@@ -44,7 +45,7 @@ const Home = () => {
         </ProductList>
 
         {products && (
-          <ProductDetailModal product={products[productIndex] ?? {}} />
+          <ProductDetailModal products={products} productIndex={productIndex} />
         )}
         <Footer mode={HomeContext} />
       </div>

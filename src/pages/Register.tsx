@@ -2,7 +2,7 @@ import FormRegister from "../components/forms/register/FormRegister";
 import Header from "../components/layouts/Header";
 import RegisterContextProvider, {
   RegisterContext,
-} from "../contexts/RegisterProvider";
+} from "../contexts/forms/RegisterProvider";
 import Footer from "../components/layouts/Footer";
 import Title from "../components/layouts/Title";
 import { RegisterEmoji } from "../components/svg/RegisterEmoji";

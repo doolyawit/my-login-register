@@ -1,5 +1,5 @@
 import React from "react";
-import { ILoginRegisterContextOption } from "./interfaces";
+import { ILoginRegisterContextOption } from "../interfaces";
 
 export const RegisterContext = React.createContext<ILoginRegisterContextOption>(
   {

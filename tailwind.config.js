@@ -24,6 +24,10 @@ export default {
         sans: ["Outfit", "sans-serif"],
         q: ["Quicksand", "sans-serif"],
       },
+      fontSize: {
+        "2xs": ".7rem",
+        "3xs": ".6rem",
+      },
     },
   },
   plugins: [],

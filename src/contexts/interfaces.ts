@@ -8,9 +8,8 @@ export interface ILoginRegisterContextOption {
 export interface IHomeContextOption {
   title: string;
 }
-export interface ProductDetailModalContextType {
+export interface InformationModalContextType {
   isModalOpen: boolean;
   openModal: () => void;
   closeModal: () => void;
-  modalLabel: string;
 }
