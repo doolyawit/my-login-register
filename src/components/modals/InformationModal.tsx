@@ -15,7 +15,7 @@ function InformationModal({
   const { isModalOpen, closeModal } = useInformationModal();
   const renderMobile = () => {
     return (
-      <div className="m-0 flex flex-col justify-normal md:hidden lg:hidden  xl:hidden">
+      <div className="m-0 flex flex-col justify-normal md:hidden lg:hidden xl:hidden">
         {/* Header */}
         <div className="mb-2 flex h-1/6 items-center  justify-between  border-b border-solid border-black px-3 pb-1 pt-2">
           <span className="text-sm text-black sm:text-2xl">{title}</span>
@@ -55,7 +55,7 @@ function InformationModal({
       closeModal={closeModal}
       modalLabel={modalLabel}
       modalStyle={
-        ' relative top-1/4 mx-auto w-2/3 h-fit rounded-xl  sm:absolute sm:left-1/4 xl:left-1/3 sm:top-1/4 sm:w-1/3 bg-green p-0 m-0 md:w-1/2  lg:w-1/2 xl:w-1/3  '
+        'relative top-1/4 mx-auto w-2/3 h-fit rounded-xl sm:absolute sm:left-1/4 xl:left-1/3 sm:top-1/4 sm:w-1/3 bg-green p-0 m-0 md:w-1/2 lg:w-1/2 xl:w-1/3'
       }
     >
       {/* Header */}

@@ -118,7 +118,11 @@ function ProductDetailModal({
             ${products[productIndex]?.price}
           </div>
           <div className="description-container relative bg-green sm:mt-1 sm:text-xs">
-            <p className={'h-52 max-h-52 overflow-scroll text-black'}>
+            <p
+              className={
+                'h-52 max-h-52 overflow-scroll overflow-x-hidden text-black'
+              }
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Egestas maecenas pharetra convallis posuere morbi leo urna. Purus
