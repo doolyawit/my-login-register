@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+
 export interface Product {
   id: number;
   name: string;
@@ -8,9 +10,9 @@ export interface Product {
 }
 
 export interface ProductServiceAble {
-  reqGetProducts(): Promise<Product[]>;
+  reqGetProducts(): Observable<Product[]>;
 }
 
 export interface ProductRepositoryAble {
-  getProducts: () => Promise<Product[]>;
+  getProducts: () => Observable<Product[]>;
 }

@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+
 export interface Picture {
   id: number;
   alt_description: string;
@@ -5,9 +7,9 @@ export interface Picture {
 }
 
 export interface PictureServiceAble {
-  reqGetPictures(): Promise<Picture[]>;
+  reqGetPictures(): Observable<Picture[]>;
 }
 
 export interface PictureRepositoryAble {
-  getPictures: () => Promise<Picture[]>;
+  getPictures: () => Observable<Picture[]>;
 }

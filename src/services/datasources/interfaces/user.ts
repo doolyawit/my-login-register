@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+
 export interface UserLogin {
   email: string;
   password: string;
@@ -17,8 +19,8 @@ export interface UserRegister {
   phone: string;
 }
 export interface UserServiceAble {
-  reqSignIn(credential: UserLogin): Promise<User>;
+  reqSignIn(credential: UserLogin): Observable<User>;
 }
 export interface UserRepositoryAble {
-  signIn: (credential: UserLogin) => Promise<User>;
+  signIn: (credential: UserLogin) => Observable<User>;
 }

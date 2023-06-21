@@ -1,13 +1,12 @@
 import ProductRemote from '../../productRemote';
 import { UserLogin, User, UserServiceAble } from '../interfaces/user';
+import { Observable, from } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 export class UserService extends ProductRemote implements UserServiceAble {
-  reqSignIn(credential: UserLogin) {
-    return new Promise<User>((resolve, reject) => {
-      this.getInstance()
-        .post<User>('/singin', credential)
-        .then((res) => resolve(res.data))
-        .catch((err) => reject(err));
-    });
+  reqSignIn(credential: UserLogin): Observable<User> {
+    return from(this.getInstance().post<User>('/signin', credential)).pipe(
+      map((res) => res.data)
+    );
   }
 }
