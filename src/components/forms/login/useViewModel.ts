@@ -19,18 +19,19 @@ export const useViewModel = () => {
     return new UserRepository(new UserServiceMock());
   }, []);
   const [errorMessage, setErrorMessage] = useState<null | string>(null);
+
   const handleSubmit = async (values: UserLogin) => {
-    userService
-      .signIn(values)
-      .then((user) => {
+    userService.signIn(values).subscribe({
+      next: (user) => {
         console.log('response:', user);
         auth.setCredential(user);
         navigate(PRIVATE_PATH.HOME, { replace: true });
-      })
-      .catch((error) => {
-        console.error('err: ', error);
-        setErrorMessage(error.message);
-      });
+      },
+      error: (err) => {
+        console.log('err: ', err);
+        setErrorMessage(err.message);
+      },
+    });
   };
   return {
     validate,

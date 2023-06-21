@@ -21,15 +21,15 @@ const useViewModel = () => {
   }, []);
 
   useEffect(() => {
-    productRepo
-      .getProducts()
-      .then((res) => {
+    productRepo.getProducts().subscribe({
+      next: (res) => {
         setProducts(res);
-        console.log('response ', res);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+        console.log('res: from home ', res);
+      },
+      error: (err) => {
+        console.log('err: ', err);
+      },
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

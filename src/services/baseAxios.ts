@@ -2,6 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { PUBLIC_PATH } from '../constants/path';
 import { User } from './datasources/interfaces/user';
 import { clearToken } from '../utils/storage';
+import { throwError } from 'rxjs';
 
 class BaseAxios {
   private instance: AxiosInstance;
@@ -16,7 +17,7 @@ class BaseAxios {
         if (err.response.status === 401) {
           this.handleUnAuthorized();
         }
-        return Promise.reject(err);
+        return throwError(() => new Error(err?.response?.data?.message ?? ''));
       }
     );
 
@@ -29,7 +30,7 @@ class BaseAxios {
         return config;
       },
       (err) => {
-        return Promise.reject(err);
+        return throwError(() => new Error(err?.response?.data?.message ?? ''));
       }
     );
   }

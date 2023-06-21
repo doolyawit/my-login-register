@@ -4,8 +4,13 @@ import { debounceTime } from 'rxjs/operators';
 const inputSubject = new Subject();
 
 export const SearchBox = () => {
-  inputSubject.pipe(debounceTime(500)).subscribe((value) => {
-    console.log(value);
+  inputSubject.pipe(debounceTime(500)).subscribe({
+    next: (value) => {
+      console.log(value);
+    },
+    error: (err) => {
+      console.log(err);
+    },
   });
   return (
     <div className="mt-2 content-center items-center justify-center gap-2">
